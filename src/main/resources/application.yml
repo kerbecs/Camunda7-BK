@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: camunda7
+  datasource:
+    username: root
+    password: test123
+    url: jdbc:mysql://localhost:3306/camunda
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081
+
+camunda:
+  bpm:
+    database:
+      type: mysql
+    generic-properties:
+      properties:
+        historyTimeToLive: P500D
+    job-executor:
+      activate: true
